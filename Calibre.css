@@ -35,7 +35,3 @@
   margin-top: 100vh;
   padding-top: 25vh;
 }
-[class*="-paginated"] [id*="-25vh"] {
-  padding-top: 25vh;
-}
-
