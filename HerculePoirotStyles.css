@@ -1,0 +1,218 @@
+/* common css for Poirot */
+@import url(css2.css);
+@namespace epub "http://www.idpf.org/2007/ops";
+body {
+  margin: 0;
+  font-family: "Noticia Text";
+  line-height: 1.6;
+}
+body[id*="center"], body[id="cover"] {
+  display: flex;
+  height: 98vh;
+  align-items: center;
+  justify-content: space-around;
+}
+body[id="cover"] div {
+  width: 100%;
+}
+p {
+  margin: 0.2em 0;
+  text-indent: 1.2em;
+  text-align: justify;
+  widows: 1;
+  orphans: 1;
+}
+[id^="part"] > h1 {
+  text-indent: 0;
+  text-align: center;
+  opacity: 0.7;
+  margin: 0;
+  font: normal 1.2em "Noticia Text";
+  letter-spacing: 0.3rem;
+}
+[id^="part"]:before {
+  content: "";
+  display: block;
+  width: 5.5rem;
+  height: 5.8rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 5.5em;
+  margin: 0 auto;
+}
+div[id^="chapter"] {
+  margin: 0 0 4rem 0;
+}
+div[id^="chapter"]:before {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 6.15rem;
+  background-repeat: no-repeat;
+  background-position: center 1em;
+  background-size: 5rem;
+  margin: 0 auto;
+}
+[id^="part"] > div {
+  text-align: center;
+  text-indent: 0;
+  font-family: "Francois One";
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+div[id^="chapter"] > h2 {
+  text-indent: 0;
+  text-align: center;
+  opacity: 0.7;
+  margin: 0;
+  font: normal 1.1em "Noticia Text";
+}
+div[id^="chapter"] > div {
+  text-align: center;
+  text-indent: 0;
+  font-family: "Francois One";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+div.letter {
+  margin: 1.4em 0.5em 1.4em 1.2em;
+  font-style: italic;
+}
+div.letter > p:first-child {
+  text-indent: 0;
+}
+div.letter > p:last-child {
+  text-align: right;
+}
+div.letter > p:only-child {
+  text-align: justify;
+}
+div.poem {
+  margin: 1em 0.8em 1em 2em;
+}
+.poem > p {
+  text-indent: 0;
+  font-style: italic;
+}
+div.dedication {
+  margin: 10em 2em 0 2em;
+}
+div.dedication p {
+  text-align: center;
+  text-indent: 0;
+  font-style: italic;
+}
+div.msg {
+  margin: 0.8em 1em;
+}
+div.msg > p {
+  text-indent: 0;
+}
+.noindent, [id^="chapter"] + p, .break {
+  text-indent: 0;
+}
+.small {
+  font-size: 0.8em;
+}
+a, ins, del {
+  text-decoration: none;
+}
+[id^="fn-"] > p, [id^="img-"] > p {
+  text-indent: 0;
+}
+[id^="img-"] > img {
+  width: 100%;
+  max-height: 95%;
+}
+.break:before {
+  background: url(../Images/mustache.svg) no-repeat center/8em;
+  height: 6em;
+  display: block;
+  content: "";
+}
+.top05 {
+  margin-top: 0.5em;
+}
+.right {
+  text-align: right;
+}
+[id^="swap-"] {
+  font-style: italic;
+  color: inherit;
+}
+[id^="swap-"] > del, .show_opt2 > ins {
+  display: none;
+}
+.show_opt2 > del {
+  display: inline;
+}
+a[id^="swap-"] {
+  border-bottom-color: lightgrey;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+/* Common Jacket */
+div[id^="jacket"] {
+  width: 95%;
+  max-width: 20em;
+  padding: 0.6em 0 0.4em 0;
+  text-align: center;
+  border-width: 0.25em;
+  border-style: double;
+  border-radius: 0.5em;
+  border-image-slice: 74 74 74 74;
+  border-image-width: 30px 30px 30px 30px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-source: url(../Images/data-uri.svg);
+  font-family: serif;
+}
+#agatha {
+  width: 14rem;
+  height: 9.1rem;
+  margin: 0 auto;
+  background-image: url(../Images/agathachristie-signature-mono.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 14rem;
+}
+[id^="title"] {
+  margin: 13vh auto;
+  line-height: 1.2;
+  display: block;
+  text-align: center;
+  font-family: "Francois One";
+  font-weight: normal;
+}
+[id^="title"]:before {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 0.3rem auto;
+  background-size: 5rem;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+#translator {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  margin: 0;
+}
+#translator:before {
+  content: "dựa trên bản dịch của";
+  display: block;
+  font-size: small;
+  font-weight: normal;
+  margin: 0;
+}
+/* Calibre Viewer */
+[class$="dark-colors"] #jacket-container, [class$="dark-colors"] #jacket-container [id^="title"], [class$="dark-colors"] #jacket-container #translator {
+  filter: invert(100%);
+}
+[class$="dark-colors"] aside img[id^="mono"] {
+  filter: invert(100%) !important;
+}
+[class^="calibre-viewer"] [epub|type$="note"] {
+  display: none !important;
+}
