@@ -1,11 +1,11 @@
 /* Styles ngoài cho Calibre Viewer */
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700');
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400..700;1,400..700');
 
 :root {
     --font-weight: 400;
     --font-size: 1rem;
-    --font-family: 'Lora'; 
+    --font-family: 'Literata'; 
     --line-height: 1.6}
     
 @media (width: 554px)  {
