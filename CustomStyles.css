@@ -1,0 +1,42 @@
+/* Styles ngoài cho Calibre Viewer */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700');
+
+:root {
+    --font-weight: 400;
+    --font-size: 1rem;
+    --font-family: 'Lora'; 
+    --line-height: 1.6}
+    
+@media (width: 554px)  {
+	:root {
+    --font-weight: 700; }
+    }
+
+p { 
+    font-family:  var(--font-family); 
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-weight: var(--font-weight);
+    text-align: justify; 
+    margin: 0.2rem 0; }
+
+h1, h2 {
+    font-weight: normal;
+ }
+
+aside p { 
+    text-indent: 0; }
+
+aside img { 
+    display: block; 
+    width: 100%;	
+    margin: 0 auto; }
+
+body.calibre-viewer-paginated aside, aside a { 
+   display: none !important; }
+
+div.banner { 
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -70%); }
